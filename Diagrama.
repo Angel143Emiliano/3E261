@@ -1,0 +1,26 @@
+class DonkeyKong
+class Mario
+class Pauline
+class BolaFire
+class Personaje
+
+Mario --> Personaje
+DonkeyKong --> Personaje
+Pauline --> Personaje
+
+DonkeyKong *-- Fuerza
+DonkeyKong 0-- Barriles
+DonkeyKong 0-- BarrilesAzules
+DonkeyKong 0-- BarrilesFire
+DonkeyKong 0-- Plataformas
+
+Mario 0-- Martillo
+Mario 0-- Escaleras
+Mario *-- Salto
+Mario *-- Sombrero
+Mario *-- Bigote
+Mario *-- Vida
+
+Pauline *-- Sombrero
+Pauline *-- Bolso
+Pauline *-- Paraguas
