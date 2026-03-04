@@ -3,24 +3,53 @@ class Mario
 class Pauline
 class BolaFire
 class Personaje
+class Fuerza
+class Barriles
+class BarrilesAzules
+class BarrilesFire
+class Plataformas
+class Martillo
+class Escaleras
+class Salto
+class Sombrero
+class Bigote
+class Vida
+class Bolso
+class Paraguas
+class Aceite
+class Llamas
+class CintasTransportadoras
+class Puntuacion
+class Temporizador
+
+
 
 Mario --> Personaje
 DonkeyKong --> Personaje
 Pauline --> Personaje
 
 DonkeyKong *-- Fuerza
+DonkeyKong *-- Animacion
 DonkeyKong 0-- Barriles
 DonkeyKong 0-- BarrilesAzules
 DonkeyKong 0-- BarrilesFire
 DonkeyKong 0-- Plataformas
 
-Mario 0-- Martillo
-Mario 0-- Escaleras
 Mario *-- Salto
 Mario *-- Sombrero
 Mario *-- Bigote
 Mario *-- Vida
+Mario *-- Puntuacion
+Mario 0-- Martillo
+Mario 0-- Escaleras
 
 Pauline *-- Sombrero
 Pauline *-- Bolso
 Pauline *-- Paraguas
+Pauline *-- Corazon
+Pauline *-- Rescate
+
+BolaFire --> Personaje
+BolaFire 0-- Aceite
+BolaFire *-- Llamas
+
