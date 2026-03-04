@@ -1,55 +1,53 @@
-class DonkeyKong
-class Mario
-class Pauline
-class BolaFire
-class Personaje
-class Fuerza
-class Barriles
-class BarrilesAzules
-class BarrilesFire
-class Plataformas
+@startuml
+
+class DonkeyKong  {
+-Vida(3)
++morir(1)
+}
+
+class Mario {
+-Vida
++morir
+}
+
+class Pauline 
+
+class Fireball{
+-Vida
++morir
+}
+
+class Spark {
+-Vida
++morir
+}
+class CuboDeAceite
+class Vida 
 class Martillo
-class Escaleras
-class Salto
-class Sombrero
-class Bigote
-class Vida
-class Bolso
-class Paraguas
-class Aceite
-class Llamas
-class CintasTransportadoras
-class Puntuacion
-class Temporizador
-
-
 
 Mario --> Personaje
 DonkeyKong --> Personaje
 Pauline --> Personaje
+Fireball --> Personaje
+Spark -->Personaje
 
-DonkeyKong *-- Fuerza
-DonkeyKong *-- Animacion
-DonkeyKong 0-- Barriles
-DonkeyKong 0-- BarrilesAzules
-DonkeyKong 0-- BarrilesFire
-DonkeyKong 0-- Plataformas
+Fireball o--CuboDeAceite
 
-Mario *-- Salto
-Mario *-- Sombrero
-Mario *-- Bigote
-Mario *-- Vida
-Mario *-- Puntuacion
-Mario 0-- Martillo
-Mario 0-- Escaleras
+DonkeyKong *--Fuerza
+DonkeyKong o--Barriles
+DonkeyKong o--BarrilesAzules
+DonkeyKong o--BarrilFire
+DonkeyKong o--Plataformas
+DonkeyKong o--BarrilSalvaje
 
-Pauline *-- Sombrero
-Pauline *-- Bolso
-Pauline *-- Paraguas
-Pauline *-- Corazon
-Pauline *-- Rescate
+Mario o--Martillo
+Mario o--Escaleras
+Mario *--Sombrero
+Mario *--Bigote
+Mario "i" *-- "3" Vida 
 
-BolaFire --> Personaje
-BolaFire 0-- Aceite
-BolaFire *-- Llamas
+Pauline *--Sombrero 
+Pauline *--Bolso 
+Pauline *--Paraguas
 
+@enduml
