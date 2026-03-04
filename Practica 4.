@@ -3,6 +3,7 @@
 class DonkeyKong  {
 -Vida vida(3)
 +morir
++daño lanzabarril(daño)
 }
 
 class Mario {
