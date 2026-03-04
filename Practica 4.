@@ -1,0 +1,53 @@
+@startuml
+
+class DonkeyKong  {
+-Vida(3)
++morir(1)
+}
+
+class Mario {
+-Vida
++morir
+}
+
+class Pauline 
+
+class Fireball{
+-Vida
++morir
+}
+
+class Spark {
+-Vida
++morir
+}
+class CuboDeAceite
+class Vida 
+class Martillo
+
+Mario --> Personaje
+DonkeyKong --> Personaje
+Pauline --> Personaje
+Fireball --> Personaje
+Spark -->Personaje
+
+Fireball o--CuboDeAceite
+
+DonkeyKong *--Fuerza
+DonkeyKong o--Barriles
+DonkeyKong o--BarrilesAzules
+DonkeyKong o--BarrilFire
+DonkeyKong o--Plataformas
+DonkeyKong o--BarrilSalvaje
+
+Mario o--Martillo
+Mario o--Escaleras
+Mario *--Sombrero
+Mario *--Bigote
+Mario "i" *-- "3" Vida 
+
+Pauline *--Sombrero 
+Pauline *--Bolso 
+Pauline *--Paraguas
+
+@enduml
