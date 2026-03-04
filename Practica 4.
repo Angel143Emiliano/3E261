@@ -1,12 +1,12 @@
 @startuml
 
 class DonkeyKong  {
--Vida(3)
-+morir(1)
+-Vida vida(3)
++morir
 }
 
 class Mario {
--Vida
+-Vida vida(3)
 +morir
 }
 
