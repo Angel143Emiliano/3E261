@@ -14,7 +14,7 @@ class Enemigo
 class BarrilesAzules
 class BarrilFire
 class Jugador
-class Colicion
+class Colision
 class Sombrero
 class Jugador
 
@@ -90,6 +90,11 @@ DonkeyKong "i" o-- "many" BarrilExplosivo
 DonkeyKong o--Plataformas
 DonkeyKong --> Pauline
 
+Barriles --> Mario : golpea
+BarrilesAzules --> Mario :golpea
+BarrilFire --> Mraio : golpea
+BarrilExplosivo --> Mario : golpea
+
 MotorJuego "i" --> "many" Nivel
 
 
@@ -99,7 +104,7 @@ Mario *--Sombrero
 Mario *--Bigote
 Mario "i" *-- "3" Vida 
 Mario "i" *-- "many" Salto
-Mario "i" *-- "many" Colicion
+Mario "i" *-- "many" Colision
 Mario "i" -- "1" Pauline :rescata
 Mario --> Escalera
 Mario --> Plataforma
@@ -114,5 +119,7 @@ Colision --> Obstaculo
 
 Jugador "i" -- "i" Mario
 Jugador "i" -- "i" Puntaje
+
+Nivel "i" *-- Enemigo
 
 @enduml
