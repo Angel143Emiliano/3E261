@@ -1,26 +1,118 @@
-class DonkeyKong
-class Mario
-class Pauline
-class BolaFire
+@startuml nombre
+
 class Personaje
+class CuboDeAceite
+class Vida 
+class Bigote 
+class Martillo
+class Vida
+class Plataforma
+class Escalera
+class Nivel
+class Obstaculo 
+class Enemigo
+class BarrilesAzules
+class BarrilFire
+class Jugador
+class Colicion
+class Sombrero
+class Jugador
+
+class Puntaje{
+-puntos
++sumar()
+}
+
+class Martillo{
++destruirEnemigo
+}
+
+class BarrilExplosivo{
++explotar()
+}
+
+class Bonus{
++daraPuntos()
+}
+
+class MotorJuego{
++iniciar()
++actualizar()
+}
+
+class Barriles{
++rodar()
+}
+
+class DonkeyKong  {
+-Vida vida(3)
++saltar
++daño lanzabarril(daño)
+}
+
+class Mario {
+-Vida vida(3)
+-Puntaje
++saltar()
++usarMartillo()
++subirEscalera()
+}
+
+class Pauline {
++pedir ayuda
+}
+class Fireball{
+-Vida
++morir
+}
+
+class Spark {
+-Vida
++morir
++moverElectrico
+}
 
 Mario --> Personaje
 DonkeyKong --> Personaje
 Pauline --> Personaje
+Fireball --> Personaje
+Spark --> Personaje
+Fireball --> Enemigo
+Spark --> Enemigo
+DonkeyKong --> Enemigo
+Fireball "many" o-- "1" CuboDeAceite
 
-DonkeyKong *-- Fuerza
-DonkeyKong 0-- Barriles
-DonkeyKong 0-- BarrilesAzules
-DonkeyKong 0-- BarrilesFire
-DonkeyKong 0-- Plataformas
+DonkeyKong *--Fuerza
+DonkeyKong "i" o-- "many" Barriles
+DonkeyKong "i" o-- "many" BarrilesAzules
+DonkeyKong "i" o-- "many"BarrilFire
+DonkeyKong "i" o-- "many" BarrilExplosivo
+DonkeyKong o--Plataformas
+DonkeyKong --> Pauline
 
-Mario 0-- Martillo
-Mario 0-- Escaleras
-Mario *-- Salto
-Mario *-- Sombrero
-Mario *-- Bigote
-Mario *-- Vida
+MotorJuego "i" --> "many" Nivel
 
-Pauline *-- Sombrero
-Pauline *-- Bolso
-Pauline *-- Paraguas
+
+Mario "i" o--"0..1" Martillo
+Mario o--Escaleras
+Mario *--Sombrero
+Mario *--Bigote
+Mario "i" *-- "3" Vida 
+Mario "i" *-- "many" Salto
+Mario "i" *-- "many" Colicion
+Mario "i" -- "1" Pauline :rescata
+Mario --> Escalera
+Mario --> Plataforma
+Mario --> Bonus
+
+Pauline *--Sombrero 
+Pauline *--Bolso 
+Pauline *--Paraguas
+
+Colision --> Enemigo
+Colision --> Obstaculo
+
+Jugador "i" -- "i" Mario
+Jugador "i" -- "i" Puntaje
+
+@enduml
