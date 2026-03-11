@@ -16,7 +16,17 @@ class BarrilFire
 class Jugador
 class Colision
 class Sombrero
-class Jugador
+class Animacion
+
+class Jugador{
+-nombre
+-VidasRestantes
+-NivelActual
+-puntajeTotal
++iniciarPartida()
++perderVida()
++reiniciarJuego()
+}
 
 class Puntaje{
 -puntos
@@ -46,7 +56,7 @@ class Barriles{
 
 class DonkeyKong  {
 -Vida vida(3)
-+saltar
++saltar()
 +daño lanzabarril(daño)
 }
 
@@ -59,17 +69,16 @@ class Mario {
 }
 
 class Pauline {
-+pedir ayuda
++pedir ayuda()
 }
 class Fireball{
--Vida
-+morir
++mover()
++morir()
 }
 
 class Spark {
--Vida
-+morir
-+moverElectrico
++morir()
++moverElectrico()
 }
 
 Mario --> Personaje
@@ -121,5 +130,7 @@ Jugador "i" -- "i" Mario
 Jugador "i" -- "i" Puntaje
 
 Nivel "i" *-- Enemigo
+Sonido --> MotorJuego
+Animacion --> Personaje
 
 @enduml
