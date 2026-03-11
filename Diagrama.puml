@@ -101,7 +101,7 @@ DonkeyKong --> Pauline
 
 Barriles --> Mario : golpea
 BarrilesAzules --> Mario :golpea
-BarrilFire --> Mraio : golpea
+BarrilFire --> Mario : golpea
 BarrilExplosivo --> Mario : golpea
 
 MotorJuego "i" --> "many" Nivel
