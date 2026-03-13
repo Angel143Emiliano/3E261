@@ -1,11 +1,9 @@
-@startuml nombre
-
+@startuml Donkey Kong
 class Personaje
 class CuboDeAceite
 class Vida 
 class Bigote 
 class Martillo
-class Vida
 class Plataforma
 class Escalera
 class Nivel
@@ -17,6 +15,9 @@ class Jugador
 class Colision
 class Sombrero
 class Animacion
+class Musica
+class Fuerza
+
 
 class Jugador{
 -nombre
@@ -132,5 +133,5 @@ Jugador "i" -- "i" Puntaje
 Nivel "i" *-- Enemigo
 Sonido --> MotorJuego
 Animacion --> Personaje
-
+Musica --> MotorJuego
 @enduml
